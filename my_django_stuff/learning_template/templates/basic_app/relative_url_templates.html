@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends "basic_app/base.html"%}
+{% block content %}
+    <h1>WELCOME TO RELATIVE URL TEMPLATE</h1>
+    <a href="{% url 'basic_app:other' %}">the other page</a><!--basic_app here is the appname registered in urls.py of project folder-->
+    <br>
+    <!-- note that these templates url is referenced to urls.py file. -->
+    <!-- for Examples homepage is directly linked to project url thus straight call for the homepage can be made. -->
+    <!-- for other page note that we have linked it to app called basic app and is then mapped -->
+    <a href="{% url 'admin:index' %}">LINK TO ADMIN PAGE.</a>
+    <br>
+    <a href="{% url 'homepage' %}">LINK TO HOMEPAGE.</a>
+    <br>
+
+    <!-- If a page is mapped to the url then simply pass the name. -->
+    {% endblock%}

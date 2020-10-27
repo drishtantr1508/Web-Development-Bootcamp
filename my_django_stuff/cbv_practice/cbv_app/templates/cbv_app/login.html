@@ -1,0 +1,16 @@
+{% extends 'cbv_app/base.html' %}
+{% block content %}
+<div class="jumbotron">
+  <h1>Old School?? Yeah... We serve that too :)</h1>
+  <h3>Fill the details to login.</h3>
+  <form method="POST">
+    {% csrf_token %}
+    <label for="username">Username:</label>
+    <input type="text" name="username" class="form-control" placeholder="Enter your username here...">
+    <label for="password">Password:</label>
+    <input type="password" name="password"  class="form-control">
+    <input type="submit" class="btn btn-success btn-lg" value="LogIn">
+  </form>
+<h4>Not Registered Yet?? <a href="{% url 'cbv_app:register' %}">SignUp Here>>></a></h4>
+</div>
+{% endblock %}

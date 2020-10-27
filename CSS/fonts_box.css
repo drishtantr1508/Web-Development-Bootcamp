@@ -1,0 +1,45 @@
+h2{
+  font-family: "italic";
+  text-align: center;
+}
+p{
+  font-family: "";
+}
+body{
+
+}
+/* 1em=16px
+   2em=32px and so on... */
+.tab{
+margin-left: 30%;
+}
+#td1{
+  margin-left: 25%;
+  background-color: #1e8a8a;
+  height: 300px;
+  width: 100px;
+}
+#td2{
+margin-right:5px;
+  background-color: #5de499;
+  height: 300px;
+  width: 100px;
+}
+#td3{
+margin-right:5px;
+  background-color: #97e0b7;
+  height: 300px;
+  width: 100px;
+}
+#td4{
+  margin-right:5px;
+  background-color:#eae5b7;
+  height: 300px;
+  width: 100px;
+}
+#td5{
+  margin-right: 25%;
+  background-color:#ff4747;
+  height: 300px;
+  width: 100px;
+}

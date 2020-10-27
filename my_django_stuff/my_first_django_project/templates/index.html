@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static  %} <!-- this has been changed from django 1. it was static files earlier.-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=, initial-scale=1.0"> -->
+    <title>Django level two.</title>
+    <link rel="stylesheet" href="{%static "css/index.css"%}">
+</head>
+<body>
+    <h1>from index.html</h1>
+    {{insert_me}}<br>
+    <h2>{{insert_img}}</h2>
+    <img src="{% static 'images/milkyway.png' %}" alt="Sorry we couldn't show you that georgeous image of milky way):">
+    <em><strong>{{insert_book}}</strong></em>
+    <b><p> {{insert_book}} is the best book for the physics beginners!</p></b>
+    <h1>Here are your acess AccessRecords</h1>
+    <div class="djangtwo">
+      {% if access_records %}<!--to check if access_records is present or not-->
+      <table "django2">
+        <thead>
+          <th>Site Name</th>
+          <th>Date Accessed</th>
+        </thead>
+        {% for acc in access_records %}
+        <tr>
+          <td>{{acc.name}}</td>
+
+          <td>{{acc.date}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+      {% endif %}
+    </div>
+</body>
+</html>

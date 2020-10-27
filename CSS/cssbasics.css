@@ -1,0 +1,49 @@
+/* twowrite a comment*/
+/*  selected tag{ #to modify through tagname
+   property: value;
+}*/
+/* #id{ #to modify id wise.
+    property: value;
+} */
+/* .classname{ # to modify through class name.
+   property: value;
+}*/
+body{
+  background-color: #dcd4c9;
+}
+h1{
+  color: #b600ff;
+}
+li{
+  text-align: center;
+  border-radius: 5px;
+  background-color: #bad4e8;
+  color: #803600;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  border-width: medium;
+  border-style: dotted;
+}
+ol{
+  margin-bottom: 10px;
+}
+p{
+  color: #505489;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+span{
+  color:yellow;
+}
+#list{
+  border-color: black;
+  border-style: double;
+  border-width: medium;
+  border-radius: 10px;
+  background-color: pink;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+
+}

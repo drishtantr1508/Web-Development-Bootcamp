@@ -1,0 +1,66 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% block style %}
+<style media="screen">
+  .comments-div{
+    /* background-image:url({% static 'images/3.jpeg' %});
+    background-repeat:repeat;
+    background-size:100%; */
+    background-color: #28292b;
+  }
+  ::-webkit-scrollbar{
+    width:0px;
+  }
+</style>
+{% endblock %}
+{% block content %}
+
+<h1>{{post.title}}</h1>
+<div class="dropdown-divider"></div>
+<h5>By: {{post.author}} on {{post.published_date|date:"D M Y"}}</h5>
+<div class="dropdown-divider"></div>
+{% if user.is_superuser %}
+<a class="btn btn-primary" href="{% url 'post_edit' pk=post.pk%}"> <span class="fa fa-pencil"></span> </a>
+<a href="{% url 'post_remove' pk=post.pk%}" class="btn btn-danger"> <span class="fa fa-remove"></span> </a>
+{% endif %}
+<p>{{post.text|safe|linebreaksbr}}</p>
+<br>
+{% if  not post.published_date %}
+<a class="btn btn-success" href="{% url 'post_publish' pk=post.pk %}">Publish</a>
+{% endif %}
+<div class="dropdown-divider"></div>
+<br>
+<br>
+<a class="btn btn-success" href="{% url 'add_comment_to_post' pk=post.pk %}"> <span class="fa fa-plus"></span> </a>
+<br>
+<br>
+<div class="comments-div" >
+  <h2>Comments:</h2>
+
+<div class="comments-div" style="max-height:400px; overflow-y:scroll; padding: 20px;background-color:#28292b;margin-top: 10px;border-radius:5px">
+
+
+  {% for comment in post.comments.all %}
+  <!-- this comments was related to post by related_name="comments" -->
+
+  <h5 style="margin:5px">{{comment.author}}</h5>
+  <br>
+  <p style="margin:5px">{{comment.text|safe|linebreaksbr}}</p>
+  {% if comment.approved_comment %}
+  <p>Approved Status: Approved By admin :)</p>
+  {% else %}
+  <p>Approved Status: Not Approved ):</p>
+  {% endif %}
+  <br>
+  {% if not comment.approved_comment %}
+  {% if user.is_superuser %}
+  <a class="btn btn-danger" href="{% url 'comment_remove' pk=comment.pk %}"><span class="fa fa-remove"></span></a>
+  <a class="btn btn-success" href="{% url 'comment_approve' pk=comment.pk %}"><span class="fa fa-check"></span></a>
+  {% endif %}
+  {% endif %}
+  <div class="dropdown-divider"></div>
+  {% endfor %}
+</div>
+</div>
+<br><br>
+{% endblock %}

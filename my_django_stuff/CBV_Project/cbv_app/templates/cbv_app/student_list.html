@@ -1,0 +1,9 @@
+{%extends 'cbv_app/cbv_app_base.html'%}
+{%block content%}
+<h1>Welcome to List of School page</h1>
+<ol>
+  {%for school in schools %}
+  <h2><li><a href="{{school.id}}">{{school.name}}</a></li></h2>
+  {%endfor%}
+</ol>
+{%endblock%}

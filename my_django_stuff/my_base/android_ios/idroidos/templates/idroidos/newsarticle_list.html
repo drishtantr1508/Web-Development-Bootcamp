@@ -1,0 +1,25 @@
+{% extends 'idroidos/base.html' %}
+{% load static %}
+{% block css_style %}
+<link rel="stylesheet" href="{% static 'css/list.css'%}">
+{% endblock %}
+{% block content %}
+<div class="latest-news container" data-aos="fade-left">
+  {% for news in newsarticles %}
+  <div data-aos="fade-down">
+
+
+  <h1>{{news.heading|safe|linebreaksbr}}</h1>
+  <div class="brief" data-aos="fade-down">
+    <p>{{news.para1|safe|linebreaksbr}}</p>
+    <a href="{% url 'news_details' pk=news.pk %}" class="btn btn-danger full-article" type="button" name="">
+       <span class="link-dark">Read Full Article</span></a>
+  </div>
+  </div>
+  <p><a href="{% url 'comparison_list'%}" class="link">Explore latest Comparisons >>></a> or
+  <a href="{% url 'smartphone_list' %}" class="link">Explore latest SmartPhones >>></a></p>
+  {% endfor %}
+</div>
+
+
+{% endblock %}

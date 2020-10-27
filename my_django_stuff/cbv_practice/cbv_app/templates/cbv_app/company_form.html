@@ -1,0 +1,10 @@
+{% extends 'cbv_app/base.html' %}
+{% block content %}
+<div class="jumbotron">
+  <form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" class="btn btn-primary" value="Update">
+  </form>
+</div>
+{% endblock %}

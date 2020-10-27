@@ -1,0 +1,39 @@
+body{
+  background-color: #b0e0e6;
+}
+h1{
+  border: thin solid black;
+}
+.div1{
+  background-color: #fffca5;
+}
+h2{
+  color: purple;
+}
+#itemone{
+  color: purple;
+  text-decoration: overline;
+}
+li a[href="http://www.google.com"]{
+  color:red;
+}
+#textblock{
+  height: 400px;
+  width: 800px;
+  border: 5px solid grey;
+}
+#mail{
+  border:2px solid rgb(144, 0, 0);
+}
+#pass{
+  border:2px solid rgb(144, 0, 0);
+}
+input{
+  border:2px solid rgb(144, 0, 0);
+}
+.exit{
+  background-color: blue;
+  border: 4px dashed yellow;
+}
+
+#para{background-color: #fffca5;}

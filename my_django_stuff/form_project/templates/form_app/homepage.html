@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<title></title>
+<!-- <style media="screen">
+  table, th, td{
+    border: 2px solid black;
+
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  table{
+    margin:auto;
+  }
+</style> -->
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Welcome to forms self assesment project!</h1>
+        <p>Lets quickly recap what we have to do in this project.</p>
+        <ul>
+          <li>We have to make an app which contains an url mapped forms page.</li>
+          <li>Then we have to create Models with django Admin and have to dispaly a table of different contents on this page.</li>
+          <li>Then We also have to validate our form to create a bot catcher and then we have to store data in models.</li>
+          <li>We have to dispaly newly added input of user on hompage table itself</li>
+          <li>We will also use jquery and DOM to add events to our Web application.</li>
+          <li>And finally we will use css to style our web app a little bit apart from using bootstrap4.</li>
+          <li>We will also input input data from user on terminal itself.</li>
+          <li>We will use faker to populate our model with fake data.</li>
+          <li>Their will be two models:
+                <ol>
+                  <li>First will be model containing First name, last name, email, password, mobile no</li>
+                  <li>Second will be model containing addresses with name as foreign key.</li>
+                </ol>
+          </li>
+        </ul>
+      </div>
+    </div>
+  <div black class="container">
+    <div class="jumbotron">
+      <h1 align="center">User Information</h1>
+      <table align="centre" class="table table-striped">
+        <thead>
+          <th>First Name</th>
+          <th>Email</th>
+          <th>Contact</th>
+          <th>Address</th>
+        {% if user_info %}
+        {% for info,add in list2 %}
+        <tr>
+          <td>{{info.first_name}} {{info.last_name}}</td>
+          <td>{{info.Email}}</td>
+          <td>{{info.mobile_no}}</td>
+          <td>{{add.address}}</td>
+
+          <!-- </address>}}</td> -->
+        </tr>
+        {% endfor %}
+        {% endif %}
+      </table>
+
+    </div>
+
+  </div>
+  <div class="container">
+<h1 align="center">Address Information</h1>
+      <table class='table table-striped table-hover table-condensed'>
+        <thead>
+          <th>User</th>
+          <th>Address</th>
+        </thead>
+        {% for info in address_info %}
+        <tr>
+          <td>{{info.user}}</td>
+          <td>{{info.address}}</td>
+        </tr>
+        {% endfor%}
+
+      </table>
+
+
+  </div>
+  </body>
+</html>

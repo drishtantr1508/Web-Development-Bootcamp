@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends 'basicusers_app/base.html'%}
+{% load static %}
+{% block content %}
+<div class="jumbotron">
+<h1>Welcome to Login Page.</h1>
+<form class="" action="{% url 'basicusers_app:user_login' %}" method="POST">
+  <!-- for any form we need to have csrf token in template url tag -->
+  {% csrf_token %}
+  <label for="username">USERNAME</label>
+  <input type="text" name="username" placeholder="Enter your username...">
+  <label for="password">PASSWORD</label>
+  <input type="text" name="password" placeholder="Enter Password here...">
+  <input type="submit" name="" value="LogIn">
+  <h4>NEW USER! Sign up here:</h4>
+  <button type="button" name="button"> <a href="{% url "basicusers_app:register" %}">Sign Up</a>
+  </button>
+</form>
+</div>
+{% endblock %}

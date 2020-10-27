@@ -1,0 +1,22 @@
+{% extends 'cbv_app/base.html'%}
+{% block content %}
+<div class="jumbotron">
+<h1 style="color:#325158;">Details of {{employees.name}}</h1>
+<br>
+<table>
+  <tr>
+    <td><h2>Name: </h2></td>
+    <td><h2>{{employees.name}}</h2></td>
+  </tr>
+  <tr>
+    <td><h2>Age: </h2></td>
+    <td><h2>{{employees.age}}</h2></td>
+  </tr>
+  <tr>
+    <td><h2>Company: </h2></td>
+    <td><h2>{{employees.company}}</h2></td>
+  </tr>
+</table>
+<a href="{% url 'cbv_app:employeeupdate' pk=employees.pk%}" class="btn btn-warning">Update</a>
+</div>
+{% endblock %}

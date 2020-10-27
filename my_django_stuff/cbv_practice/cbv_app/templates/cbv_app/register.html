@@ -1,0 +1,17 @@
+{% extends 'cbv_app/base.html'%}
+{% block content %}
+{% if registered %}
+<h1>Thank You For Registering.</h1>
+<h3>Go to login page to login.</h3>
+<h4> <a href="{% url 'cbv_app:login'%}">LogIn Here>>></a> </h4>
+{% else %}
+<h1>Welcome to Registration Page</h1>
+<form method="POST">
+  {% csrf_token %}
+  {{user_form.as_p}}
+  {{profile_form.as_p}}
+  <input type="submit" name="" value="Register" class="btn btn-primary btn-lg">
+</form>
+<a href="{% url 'cbv_app:login'%}"><span color='green'>Already Registered ? </span> Login>>></a>
+{% endif %}
+{% endblock %}

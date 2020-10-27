@@ -1,0 +1,22 @@
+.brief{
+  background-image:linear-gradient(white,#c9dbe4);
+  justify-content: center;
+  padding:20px;
+  padding-bottom: 5px;
+  margin:20px;
+  margin-left: 3px;
+}
+.full-article{
+  background-image:linear-gradient(#dea7ad,#c3cff3);
+  margin-left: 42%;
+}
+.link{
+  background: -webkit-linear-gradient(blue,violet,green,blue);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.link-dark{
+  background: -webkit-linear-gradient(red,green,blue);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}

@@ -1,0 +1,14 @@
+{% extends "blog/base.html" %}
+{% block content %}
+{% if user.is_superuser %}
+<h1>Write your new blog here.</h1>
+<form  method="post">
+  {% csrf_token %}
+  {{form.as_p}}
+  <input class="btn btn-success" type="submit" name="" value="Post">
+</form>
+<script>var editor = new MediumEditor('.editable');</script>
+{% else %}
+<h1>You dont have right to write posts.</h1>
+{% endif %}
+{% endblock %}

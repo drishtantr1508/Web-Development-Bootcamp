@@ -1,0 +1,22 @@
+{%extends "cbv_app/cbv_app_base.html"%}
+{% block content %}
+<div class="container">
+  <div class="jumbotron">
+  <h1>Welcome to School Detail Page</h1>
+  <h2>School Details: </h2>
+  <p>Name : {{school_detail.name}}</p>
+  <p>Principal : {{school_detail.principal}}</p>
+  <p>Location : {{school_detail.location}}</p>
+  <h3>STUDENTS:</h3>
+  {% for student in school_detail.students.all %}
+  <p>{{student.name}} is {{student.age}} years old.</p>
+  {%endfor%}
+</div>
+<div class="container">
+  <a class="btn btn-warning btn-lg" href="{% url 'cbv_app:update' pk=school_detail.pk %}">Update</a>
+     <a class='btn btn-danger btn-lg' href="{% url 'cbv_app:delete' pk=school_detail.pk %}">Delete</a>
+<br><br>
+<p> <a href="{% url 'cbv_app:list'%}"> >>>Go to School List</a> </p>
+</div>
+</div>
+{% endblock %}

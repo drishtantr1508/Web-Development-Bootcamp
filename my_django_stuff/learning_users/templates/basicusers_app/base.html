@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script
+ src="https://code.jquery.com/jquery-3.1.1.min.js"
+ integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+ crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <title></title>
+    <style media="screen">
+      body{
+        padding-top: 51px;
+        background-color: #719aab;
+
+      }
+      #content{
+        padding-left: 100px;
+      }
+      /* The side navigation menu */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 140px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Active/current link */
+.sidebar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+    </style>
+  </head>
+  <body>
+
+
+    <div class="container">
+        <nav class="navbar navbar-default navbar-expand-lg navbar fixed-top navbar-light bg-dark ">
+      <a class="navbar-brand" href="{% url 'homepage'%}">DJANGO</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        <!-- no of spans will be equal to no of hambergers -->
+        <!-- This part of code is written to enable toogle mode so that when you minimise then whole things convert into hamberger menu. -->
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- we put everything in this class div so that when minimised goes under hamberger. -->
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item ">
+            <a class="nav-link active" href="{% url 'admin:index'%}">Admin</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Login</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{% url 'basicusers_app:register' %}">Register</a>
+              <!-- do note that basicusers_app here is the app name we set in urls.py of app and register is the view created in views.py file. -->
+              <a class="dropdown-item" href="{% url 'basicusers_app:login' %}">Login</a>
+              <a class="dropdown-item" href="{%url 'admin:index'%}">Admin</a>
+              </div>
+          </li>
+
+        </ul>
+        <div class="navbar-nav align-items-right">
+          {% if user.is_authenticated %}
+          {%if user.is_superuser %}
+          <a class="nav-item nav-link" href="{% url 'post_new' %}">New Post</a>
+          <a class="nav-item nav-link" href="{% url 'post_draft_list' %}">Drafts</a>
+          {% endif %}
+            <a class="nav-item nav-link" href="{% url 'logout' %}">Log out</a>
+            <a class="nav-item nav-link">Welcome: {{ user.username }}</a>
+          {% else %}
+            <a class="nav-item nav-link" href="{% url 'login' %}" aria-label="Login">
+              <span class="fa fa-user" aria-hidden="true"></span></a>
+          {% endif %}
+        </div>
+      </div>
+      </nav>
+    </div>
+
+
+
+    </div>
+
+
+
+    <!-- The sidebar -->
+
+
+    <div class="container" id="content">
+      <div class="jumbotron">
+        {% block content %}
+
+        {% endblock %}
+
+      </div>
+
+    </div>
+
+  </body>
+</html>

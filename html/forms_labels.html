@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Forms and labels</title>
+</head>
+<body>
+<form action="https://www.facebook.com" method="get">
+	<p>Enter Text: </p>
+	<input type="text" name="userinput is" placeholder="enter some text here" required="required">
+
+	<!-- bad way of labeling -->
+	<label>
+		Enter text:
+		<input type="text" name="" value="block one">
+	</label>
+	<br>
+	<br>
+	<label>
+		Enter text:
+		<input type="text" name="" value="block two">
+	</label>
+	<!-- nice way of labelling -->
+	<br>
+	<br>
+	<label for="userinput">Enter input:</label>
+	<input id="userinput" type="text" name="" value="block three">
+	<br>
+	<br>
+	<input id="userinput" type="" name="" value="block four">
+	<br><br>
+	<input type="submit" name="click me!">
+
+</form>
+</body>
+</html>

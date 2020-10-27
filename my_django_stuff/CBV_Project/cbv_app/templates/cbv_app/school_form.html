@@ -1,0 +1,15 @@
+{% extends 'cbv_app/cbv_app_base.html'%}
+{% block content %}
+<h1>
+{% if not form.instance.pk %}
+Create School
+{% else %}
+Update SchoolList
+{% endif %}
+</h1>
+<form class=""  method="post">
+  {% csrf_token %}
+  {{form.as_p}}
+  <input type="Submit" name="" class="btn btn-primary btn-lg" value="Submit">
+</form>
+{% endblock %}

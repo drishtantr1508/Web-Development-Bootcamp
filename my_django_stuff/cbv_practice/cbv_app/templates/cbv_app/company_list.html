@@ -1,0 +1,21 @@
+{% extends 'cbv_app/base.html' %}
+{% block content %}
+<div class="jumbotron">
+  <h1>List of Comapnies </h1>
+  <h1>Company Details:</h1>
+  <ol>
+  {% for company in companies %}
+    <h2><li><a href="{{company.id}}">{{company}}</a></li></h2>
+  {% endfor %}
+  </ol>
+</div>
+<div class="contaner">
+
+  <form  action="{% url 'cbv_app:create'%}" method="post">
+    {% csrf_token %}
+    <input type="submit" class="btn btn-primary btn-lg" value="Create Company">
+  </form>
+
+
+</div>
+{% endblock %}

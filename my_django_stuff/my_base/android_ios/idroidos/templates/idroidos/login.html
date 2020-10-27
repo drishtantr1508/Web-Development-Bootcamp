@@ -1,0 +1,33 @@
+{% extends 'idroidos/base.html' %}
+{% load static %}
+
+{% block css_style%}
+<link rel="stylesheet" href="{% static 'css/login_form.css'%}">
+{% endblock %}
+
+{% block content %}
+<br>
+  <div class="container" style="max-width:50%;">
+    <h1 align="center">Enter your Login details</h1>
+  <br>
+
+  <form class="form" method="POST">
+    {% csrf_token %}
+    <label for="username"> <span class="fa fa-user" style="padding:10px;"></span> </label>
+    <input type="text" name="username" placeholder="Enter your Username Here..." class="form-control">
+    <label for="password"><span class="fa fa-lock" style="padding:10px;"></span></label>
+    <input  class="form-control"type="password" name="password" placeholder="Enter your Password Here...">
+    <br>
+    <input type="submit" class="btn btn-primary btn-lg" value="LogIn">
+  </form>
+
+  <br>
+  <a href="{% url 'register'%}">Not Registerd Yet? Sign Up here>>></a>
+</div>
+
+<br><br><br>
+<div class="img">
+  <img src="{% static 'images/main_logo.jpeg'%}" alt="" style="width:100px; height: 100px;">
+</div>
+
+{% endblock %}

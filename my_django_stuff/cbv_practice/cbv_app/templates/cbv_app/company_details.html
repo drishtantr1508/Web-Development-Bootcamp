@@ -1,0 +1,35 @@
+{% extends 'cbv_app/base.html' %}
+{% block content %}
+<div class="jumbotron">
+  <h1 style="color:#325158;">Welcome to detail of the company.</h1>
+  <br>
+  <table >
+    <tr>
+      <td><h2>Name: </h2></td>
+      <td> <h2>{{company_detail.name}}</h2> </td>
+    </tr>
+    <tr>
+      <td><h2>CEO: </h2></td>
+      <td> <h2>{{company_detail.ceo}}</h2> </td>
+    </tr>
+    <tr>
+      <td><h2>Location: </h2></td>
+      <td> <h2> {{company_detail.location}}</h2> </td>
+    </tr>
+    <tr>
+      <td><h2>Type: </h2></td>
+      <td> <h2>{{company_detail.type}}</h2> </td>
+    </tr>
+  </table>
+  <br>
+  <h1 style="color:#325158;">Employee Details</h1>
+  {% for employee in company_detail.employees.all %}
+    <h2><a href="{% url 'cbv_app:employeedetail' pk=company_detail.pk %}">{{employee.name}}<a/></h2>
+  {% endfor %}
+  <br>
+  <br>
+  <br>
+  <a class="btn btn-warning btn-lg" href="{% url 'cbv_app:update' pk=company_detail.pk %}">Update</a>
+  <a class="btn btn-primary btn-lg" href="{% url 'cbv_app:companylist'%}">Company List</a>
+
+{% endblock %}
