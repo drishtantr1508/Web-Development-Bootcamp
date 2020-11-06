@@ -1,6 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from django.views.generic import(
-    TemplateView, CreateView, DetailView, ListView, UpdateView, DeleteView)
+from django.views.generic import(TemplateView, CreateView, DetailView, ListView, UpdateView, DeleteView)
 from django.contrib.auth.models import User
 from idroidos.models import (UserProfileInfo, QuickLinks, SmartphonesInfo,
                              ComparisonInfo, NewsArticle, SmartphoneComment, NewsComment, ComparisonComment)

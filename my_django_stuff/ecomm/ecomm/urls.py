@@ -14,15 +14,16 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path , include
+from django.urls import path, include
 from django.conf import settings
+# this is used to configure media files location.
 from django.conf.urls.static import static
 from api import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
-    path('api/' , include('api.urls')),
-    path('',include('api.urls'))
+    # to tell that if any one use this route we will direct to urls.py file in api app
+    path('api/', include('api.urls')),
 ]
 
-urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
