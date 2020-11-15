@@ -4,7 +4,7 @@ from rest_framework.decorators import authentication_classes, permission_classes
 
 from .models import CustomUser
 
-class CustomUserSerializer(serializers.HyperlinkedModelSerializer):
+class UserSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta():
         model = CustomUser
