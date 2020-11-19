@@ -1,0 +1,118 @@
+2020-09-15 19:18:24,750 INFO    MainThread:118572 [wandb_init.py:_log_setup():307] Logging user logs to wandb/run-20200915_191824-2c6yx269/logs/debug.log
+2020-09-15 19:18:24,750 INFO    MainThread:118572 [wandb_init.py:_log_setup():308] Logging internal logs to wandb/run-20200915_191824-2c6yx269/logs/debug-internal.log
+2020-09-15 19:18:24,750 INFO    MainThread:118572 [wandb_setup.py:_flush():68] setting env: {}
+2020-09-15 19:18:24,750 INFO    MainThread:118572 [wandb_setup.py:_flush():68] multiprocessing start_methods=fork,spawn,forkserver
+2020-09-15 19:18:24,750 WARNING MainThread:118572 [wandb_setup.py:_flush():68] Ignoring settings passed to wandb.setup() which has already been configured.
+2020-09-15 19:18:24,750 INFO    MainThread:118572 [wandb_setup.py:_flush():68] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x7f1991d00790>
+2020-09-15 19:18:24,750 INFO    MainThread:118572 [wandb_run.py:finish():864] finishing run iit-bhu/emnist/2d5yiz5t
+2020-09-15 19:18:24,750 INFO    MainThread:118572 [wandb_run.py:_atexit_cleanup():1081] got exitcode: 0
+2020-09-15 19:18:24,750 INFO    MainThread:118572 [wandb_run.py:_restore():1053] restore
+2020-09-15 19:18:24,756 INFO    MainThread:118572 [wandb_run.py:_wait_for_finish():1185] got exit ret: uuid: "b8a0e966b1494ed0aef51156bca93e75"
+response {
+  poll_exit_response {
+    file_counts {
+      wandb_count: 1
+      media_count: 1
+      other_count: 1
+    }
+    pusher_stats {
+      uploaded_bytes: 1375734
+      total_bytes: 1375734
+    }
+  }
+}
+
+2020-09-15 19:18:26,762 INFO    MainThread:118572 [wandb_run.py:_wait_for_finish():1185] got exit ret: uuid: "9a07d9cc107d4efeb597dfc399142f01"
+response {
+  poll_exit_response {
+    file_counts {
+      wandb_count: 5
+      media_count: 1
+      other_count: 1
+    }
+    pusher_stats {
+      uploaded_bytes: 1669892
+      total_bytes: 5903344
+    }
+  }
+}
+
+2020-09-15 19:18:28,766 INFO    MainThread:118572 [wandb_run.py:_wait_for_finish():1185] got exit ret: uuid: "8a26734cd0f044ef98ae53cdf90e9176"
+response {
+  poll_exit_response {
+    file_counts {
+      wandb_count: 5
+      media_count: 1
+      other_count: 1
+    }
+    pusher_stats {
+      uploaded_bytes: 4897540
+      total_bytes: 5903344
+    }
+  }
+}
+
+2020-09-15 19:18:30,772 INFO    MainThread:118572 [wandb_run.py:_wait_for_finish():1185] got exit ret: uuid: "e0636eb98ed141efa584d97759d67591"
+response {
+  poll_exit_response {
+    file_counts {
+      wandb_count: 5
+      media_count: 1
+      other_count: 1
+    }
+    pusher_stats {
+      uploaded_bytes: 5903344
+      total_bytes: 5903344
+    }
+  }
+}
+
+2020-09-15 19:18:32,776 INFO    MainThread:118572 [wandb_run.py:_wait_for_finish():1185] got exit ret: uuid: "07c521b7ebb14d84aed613669f22c78c"
+response {
+  poll_exit_response {
+    done: true
+    exit_result {
+    }
+    file_counts {
+      wandb_count: 5
+      media_count: 1
+      other_count: 1
+    }
+    pusher_stats {
+      uploaded_bytes: 5903344
+      total_bytes: 5903344
+    }
+  }
+}
+
+2020-09-15 19:18:33,937 INFO    MainThread:118572 [wandb_run.py:_show_summary():1292] rendering summary
+2020-09-15 19:18:33,945 INFO    MainThread:118572 [wandb_run.py:_show_history():1316] rendering history
+2020-09-15 19:18:33,962 INFO    MainThread:118572 [wandb_run.py:_show_files():1332] logging synced files
+2020-09-15 19:18:34,002 WARNING MainThread:118572 [wandb_setup.py:__init__():213] Ignoring settings passed to wandb.setup() which has already been configured.
+2020-09-15 19:18:37,056 INFO    MainThread:118572 [wandb_run.py:_console_start():1103] atexit reg
+2020-09-15 19:18:37,056 INFO    MainThread:118572 [wandb_run.py:_redirect():978] redirect: SettingsConsole.WRAP
+2020-09-15 19:18:37,057 INFO    MainThread:118572 [wandb_run.py:_redirect():1009] Wrapping output streams.
+2020-09-15 19:18:37,057 INFO    MainThread:118572 [wandb_run.py:_redirect():1025] Redirects installed.
+2020-09-15 19:18:37,059 INFO    MainThread:118572 [wandb_init.py:_pause_backend():229] pausing backend
+2020-09-15 19:20:23,979 INFO    MainThread:118572 [wandb_init.py:_resume_backend():234] resuming backend
+2020-09-15 19:20:24,036 INFO    MainThread:118572 [wandb_init.py:_pause_backend():229] pausing backend
+2020-09-15 19:20:25,222 INFO    MainThread:118572 [wandb_init.py:_resume_backend():234] resuming backend
+2020-09-15 19:20:25,223 INFO    MainThread:118572 [wandb_init.py:_pause_backend():229] pausing backend
+2020-09-15 19:20:25,607 INFO    MainThread:118572 [wandb_init.py:_resume_backend():234] resuming backend
+2020-09-15 19:20:25,623 INFO    MainThread:118572 [wandb_init.py:_pause_backend():229] pausing backend
+2020-09-15 19:20:43,096 INFO    MainThread:118572 [wandb_init.py:_resume_backend():234] resuming backend
+2020-09-15 19:26:20,653 INFO    MainThread:118572 [wandb_init.py:_pause_backend():229] pausing backend
+2020-09-15 19:28:22,864 INFO    MainThread:118572 [wandb_init.py:_resume_backend():234] resuming backend
+2020-09-15 19:28:22,937 INFO    MainThread:118572 [wandb_init.py:_pause_backend():229] pausing backend
+2020-09-15 19:28:23,864 INFO    MainThread:118572 [wandb_init.py:_resume_backend():234] resuming backend
+2020-09-15 19:28:23,866 INFO    MainThread:118572 [wandb_init.py:_pause_backend():229] pausing backend
+2020-09-15 19:28:24,319 INFO    MainThread:118572 [wandb_init.py:_resume_backend():234] resuming backend
+2020-09-15 19:28:24,326 INFO    MainThread:118572 [wandb_init.py:_pause_backend():229] pausing backend
+2020-09-15 19:28:26,635 INFO    MainThread:118572 [wandb_init.py:_resume_backend():234] resuming backend
+2020-09-15 19:29:18,412 INFO    MainThread:118572 [wandb_init.py:_pause_backend():229] pausing backend
+2020-09-15 19:31:03,395 INFO    MainThread:118572 [wandb_init.py:_resume_backend():234] resuming backend
+2020-09-15 19:31:03,425 INFO    MainThread:118572 [wandb_init.py:_pause_backend():229] pausing backend
+2020-09-15 19:31:27,075 INFO    MainThread:118572 [wandb_run.py:_atexit_cleanup():1081] got exitcode: 0
+2020-09-15 19:31:27,076 INFO    MainThread:118572 [wandb_run.py:_restore():1053] restore
+2020-09-15 19:31:27,078 INFO    MainThread:118572 [wandb_run.py:_restore():1053] restore
+2020-09-15 19:31:27,085 INFO    MainThread:118572 [internal.py:handle_exit():137] Internal process exited

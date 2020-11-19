@@ -1,0 +1,36 @@
+2020-09-15 20:51:18,545 INFO    MainThread:141208 [wandb_init.py:_log_setup():307] Logging user logs to wandb/run-20200915_205118-2o2lq2s2/logs/debug.log
+2020-09-15 20:51:18,545 INFO    MainThread:141208 [wandb_init.py:_log_setup():308] Logging internal logs to wandb/run-20200915_205118-2o2lq2s2/logs/debug-internal.log
+2020-09-15 20:51:18,545 INFO    MainThread:141208 [wandb_setup.py:_flush():68] setting env: {}
+2020-09-15 20:51:18,545 INFO    MainThread:141208 [wandb_setup.py:_flush():68] multiprocessing start_methods=fork,spawn,forkserver
+2020-09-15 20:51:18,545 WARNING MainThread:141208 [wandb_setup.py:_flush():68] Ignoring settings passed to wandb.setup() which has already been configured.
+2020-09-15 20:51:18,545 INFO    MainThread:141208 [wandb_setup.py:_flush():68] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x7f9f3470ef40>
+2020-09-15 20:51:18,569 WARNING MainThread:141208 [wandb_setup.py:__init__():213] Ignoring settings passed to wandb.setup() which has already been configured.
+2020-09-15 20:51:21,834 INFO    MainThread:141208 [wandb_run.py:_console_start():1103] atexit reg
+2020-09-15 20:51:21,836 INFO    MainThread:141208 [wandb_run.py:_redirect():978] redirect: SettingsConsole.WRAP
+2020-09-15 20:51:21,837 INFO    MainThread:141208 [wandb_run.py:_redirect():1009] Wrapping output streams.
+2020-09-15 20:51:21,837 INFO    MainThread:141208 [wandb_run.py:_redirect():1025] Redirects installed.
+2020-09-15 20:51:21,841 INFO    MainThread:141208 [wandb_init.py:_pause_backend():229] pausing backend
+2020-09-15 20:51:27,820 INFO    MainThread:141208 [wandb_init.py:_resume_backend():234] resuming backend
+2020-09-15 20:51:27,899 INFO    MainThread:141208 [wandb_init.py:_pause_backend():229] pausing backend
+2020-09-15 20:51:28,738 INFO    MainThread:141208 [wandb_init.py:_resume_backend():234] resuming backend
+2020-09-15 20:51:28,739 INFO    MainThread:141208 [wandb_init.py:_pause_backend():229] pausing backend
+2020-09-15 20:51:29,314 INFO    MainThread:141208 [wandb_init.py:_resume_backend():234] resuming backend
+2020-09-15 20:51:29,333 INFO    MainThread:141208 [wandb_init.py:_pause_backend():229] pausing backend
+2020-09-15 20:51:36,429 INFO    MainThread:141208 [wandb_init.py:_resume_backend():234] resuming backend
+2020-09-15 20:58:26,120 INFO    MainThread:141208 [wandb_init.py:_pause_backend():229] pausing backend
+2020-09-15 21:02:16,182 INFO    MainThread:141208 [wandb_init.py:_resume_backend():234] resuming backend
+2020-09-15 21:02:16,242 INFO    MainThread:141208 [wandb_init.py:_pause_backend():229] pausing backend
+2020-09-15 21:02:27,471 INFO    MainThread:141208 [wandb_init.py:_resume_backend():234] resuming backend
+2020-09-15 21:02:27,472 INFO    MainThread:141208 [wandb_init.py:_pause_backend():229] pausing backend
+2020-09-15 21:02:30,383 INFO    MainThread:141208 [wandb_init.py:_resume_backend():234] resuming backend
+2020-09-15 21:02:30,399 INFO    MainThread:141208 [wandb_init.py:_pause_backend():229] pausing backend
+2020-09-15 21:02:31,608 INFO    MainThread:141208 [wandb_init.py:_resume_backend():234] resuming backend
+2020-09-15 21:24:15,758 INFO    MainThread:141208 [wandb_init.py:_pause_backend():229] pausing backend
+2020-09-15 21:27:54,430 INFO    MainThread:141208 [wandb_init.py:_resume_backend():234] resuming backend
+2020-09-15 21:27:54,434 INFO    MainThread:141208 [wandb_init.py:_pause_backend():229] pausing backend
+2020-09-15 21:27:55,374 INFO    MainThread:141208 [wandb_init.py:_resume_backend():234] resuming backend
+2020-09-15 21:27:55,821 INFO    MainThread:141208 [wandb_init.py:_pause_backend():229] pausing backend
+2020-09-15 21:27:56,058 INFO    MainThread:141208 [wandb_init.py:_resume_backend():234] resuming backend
+2020-09-15 21:27:56,192 INFO    MainThread:141208 [wandb_init.py:_pause_backend():229] pausing backend
+2020-09-15 21:28:52,074 INFO    MainThread:141208 [wandb_init.py:_resume_backend():234] resuming backend
+2020-09-15 21:28:52,138 INFO    MainThread:141208 [wandb_init.py:_pause_backend():229] pausing backend

@@ -1,0 +1,21 @@
+{
+    "os": "Linux-5.7.19-2-MANJARO-x86_64-with-glibc2.10",
+    "python": "3.8.3",
+    "heartbeatAt": "2020-09-15T13:48:36.996035",
+    "startedAt": "2020-09-15T13:48:24.748180",
+    "docker": null,
+    "gpu": "GeForce GTX 1650 Ti",
+    "gpu_count": 1,
+    "cpu_count": 16,
+    "cuda": null,
+    "args": [
+        "-f",
+        "/home/drishtant/.local/share/jupyter/runtime/kernel-8ae6e7e5-a912-42e4-b959-98426251add9.json"
+    ],
+    "state": "running",
+    "program": "Deeplizard Deep learning/Untitled.ipynb",
+    "root": "/home/drishtant",
+    "host": "Asus-tuf-a15",
+    "username": "drishtant",
+    "executable": "/home/drishtant/anaconda3/bin/python"
+}
