@@ -1,0 +1,22 @@
+.custom-div {
+  /* background-color: rgb(185, 230, 215); */
+  background-image: linear-gradient(rgb(246, 228, 228), rgb(185, 251, 243));
+  border: 3px solid black;
+  border-radius: 15px;
+  padding: 10px;
+  padding-top: 0;
+}
+
+.custom-div2 {
+  background-color: rgb(121, 253, 209);
+  border: 2px solid rgb(129, 118, 118);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+.custom-background {
+  background-color: rgb(217, 175, 224);
+}

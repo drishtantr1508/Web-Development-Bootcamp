@@ -22,13 +22,16 @@ def signin(request):
     username = request.POST['email']
     password = request.POST['password']
 
-    if not re.match("^\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b$",username):
-        return JsonResponse({'error':'Enter a valid Email'})
+    # if not re.match("^\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b$",username):
+    #     return JsonResponse({'error':'Enter a valid Email'})
     
-    if len(password) < 8:
-        return JsonResponse({'error': 'Password should have atleast 8 characters'})
+    # if len(password) < 8:
+    #     return JsonResponse({'error': 'Password should have atleast 8 characters'})
     
     UserModel = get_user_model()
+    print(UserModel)
+    print("########")
+    print(type(UserModel.objects.get()))
 
     try:
         user = UserModel.objects.get(email = username)

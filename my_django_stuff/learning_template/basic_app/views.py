@@ -11,3 +11,10 @@ def other(request):
 
 def relative(request):
     return render(request,'basic_app/relative_url_templates.html')
+
+
+def base(request):
+    return render(request,'basic_app/base.html')
+
+def otherextend(request):
+    return render(request,'basic_app/otherextend.html')

@@ -1,191 +1,261 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <script
- src="https://code.jquery.com/jquery-3.1.1.min.js"
- integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
- crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
 
     <title></title>
     <style media="screen">
-      body{
+      body {
         padding-top: 51px;
         background-color: #719aab;
-
       }
-      #content{
+      #content {
         padding-left: 100px;
       }
       /* The side navigation menu */
-.sidebar {
-  margin: 0;
-  padding: 0;
-  width: 140px;
-  background-color: #f1f1f1;
-  position: fixed;
-  height: 100%;
-  overflow: auto;
-}
+      .sidebar {
+        margin: 0;
+        padding: 0;
+        width: 140px;
+        background-color: #f1f1f1;
+        position: fixed;
+        height: 100%;
+        overflow: auto;
+      }
 
-/* Sidebar links */
-.sidebar a {
-  display: block;
-  color: black;
-  padding: 16px;
-  text-decoration: none;
-}
+      /* Sidebar links */
+      .sidebar a {
+        display: block;
+        color: black;
+        padding: 16px;
+        text-decoration: none;
+      }
 
-/* Active/current link */
-.sidebar a.active {
-  background-color: #4CAF50;
-  color: white;
-}
+      /* Active/current link */
+      .sidebar a.active {
+        background-color: #4caf50;
+        color: white;
+      }
 
-/* Links on mouse-over */
-.sidebar a:hover:not(.active) {
-  background-color: #555;
-  color: white;
-}
+      /* Links on mouse-over */
+      .sidebar a:hover:not(.active) {
+        background-color: #555;
+        color: white;
+      }
 
-/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
-div.content {
-  margin-left: 200px;
-  padding: 1px 16px;
-  height: 1000px;
-}
+      /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+      div.content {
+        margin-left: 200px;
+        padding: 1px 16px;
+        height: 1000px;
+      }
 
-/* On screens that are less than 700px wide, make the sidebar into a topbar */
-@media screen and (max-width: 700px) {
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-  .sidebar a {float: left;}
-  div.content {margin-left: 0;}
-}
+      /* On screens that are less than 700px wide, make the sidebar into a topbar */
+      @media screen and (max-width: 700px) {
+        .sidebar {
+          width: 100%;
+          height: auto;
+          position: relative;
+        }
+        .sidebar a {
+          float: left;
+        }
+        div.content {
+          margin-left: 0;
+        }
+      }
 
-/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
-@media screen and (max-width: 400px) {
-  .sidebar a {
-    text-align: center;
-    float: none;
-  }
-}
-
+      /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+      @media screen and (max-width: 400px) {
+        .sidebar a {
+          text-align: center;
+          float: none;
+        }
+      }
     </style>
   </head>
   <body>
-
-
     <div class="container">
-        <nav class="navbar navbar-default navbar-expand-lg navbar fixed-top navbar-light bg-dark ">
-      <a class="navbar-brand" href="{% url 'homepage'%}">HOMEPAGE</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        <!-- no of spans will be equal to no of hambergers -->
-        <!-- This part of code is written to enable toogle mode so that when you minimise then whole things convert into hamberger menu. -->
-      </button>
+      <nav
+        class="navbar navbar-default navbar-expand-lg navbar fixed-top navbar-light bg-dark"
+      >
+        <a class="navbar-brand" href="{% url 'homepage'%}">HOMEPAGE</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+          <!-- no of spans will be equal to no of hambergers -->
+          <!-- This part of code is written to enable toogle mode so that when you minimise then whole things convert into hamberger menu. -->
+        </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <!-- we put everything in this class div so that when minimised goes under hamberger. -->
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item ">
-            <a class="nav-link active" href="{% url 'admin:index'%}">Admin</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="{% url 'basic_app:relative' %}">Relative</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="{% url 'basic_app:other' %}">Other</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dropdown
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="{% url 'basic_app:other' %}">Other</a>
-              <a class="dropdown-item" href="{%url 'basic_app:relative'%}">Relative</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="{% url 'admin:index' %}">Django Administration</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Disabled</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div>
-    </nav>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- we put everything in this class div so that when minimised goes under hamberger. -->
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="{% url 'admin:index'%}">Admin</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="{% url 'basic_app:relative' %}"
+                >Relative</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="{% url 'basic_app:other' %}"
+                >Other</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{% url 'basic_app:other' %}"
+                  >Other</a
+                >
+                <a class="dropdown-item" href="{%url 'basic_app:relative'%}"
+                  >Relative</a
+                >
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{% url 'admin:index' %}"
+                  >Django Administration</a
+                >
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Disabled</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </nav>
     </div>
 
     <div class="container">
-        <nav class="navbar navbar-default navbar-expand-lg navbar fixed-bottom navbar-light bg-dark ">
-      <a class="navbar-brand" href="{% url 'homepage'%}">HOMEPAGE</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        <!-- no of spans will be equal to no of hambergers -->
-        <!-- This part of code is written to enable toogle mode so that when you minimise then whole things convert into hamberger menu. -->
-      </button>
+      <nav
+        class="navbar navbar-default navbar-expand-lg navbar fixed-bottom navbar-light bg-dark"
+      >
+        <a class="navbar-brand" href="{% url 'homepage'%}">HOMEPAGE</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+          <!-- no of spans will be equal to no of hambergers -->
+          <!-- This part of code is written to enable toogle mode so that when you minimise then whole things convert into hamberger menu. -->
+        </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <!-- we put everything in this class div so that when minimised goes under hamberger. -->
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item ">
-            <a class="nav-link active" href="{% url 'admin:index'%}">Admin</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="{% url 'basic_app:relative' %}">Relative</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="{% url 'basic_app:other' %}">Other</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dropdown
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="{% url 'basic_app:other' %}">Other</a>
-              <a class="dropdown-item" href="{%url 'basic_app:relative'%}">Relative</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="{% url 'admin:index' %}">Django Administration</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Disabled</a>
-          </li>
-        </ul>
-        <!-- <form class="form-inline my-2 my-lg-0">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- we put everything in this class div so that when minimised goes under hamberger. -->
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="{% url 'admin:index'%}">Admin</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="{% url 'basic_app:relative' %}"
+                >Relative</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="{% url 'basic_app:other' %}"
+                >Other</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{% url 'basic_app:other' %}"
+                  >Other</a
+                >
+                <a class="dropdown-item" href="{%url 'basic_app:relative'%}"
+                  >Relative</a
+                >
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{% url 'admin:index' %}"
+                  >Django Administration</a
+                >
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Disabled</a>
+            </li>
+          </ul>
+          <!-- <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form> -->
-      </div>
-    </nav>
+        </div>
+      </nav>
     </div>
 
     <!-- The sidebar -->
-<div class="sidebar">
-  <a class="active" href="{% url 'homepage' %}">Home</a>
-  <a href="{% url 'admin:index' %}">Admin</a>
-  <a href="{% url 'basic_app:relative' %}">Relative</a>
-  <a href="{% url 'basic_app:other' %}">Other</a>
-</div>
-
-    <div class="container" id="content">
-      <div class="jumbotron">
-        {% block content %}
-
-        {% endblock %}
-
-      </div>
-
+    <div class="sidebar">
+      <a class="active" href="{% url 'homepage' %}">Home</a>
+      <a href="{% url 'admin:index' %}">Admin</a>
+      <a href="{% url 'basic_app:relative' %}">Relative</a>
+      <a href="{% url 'basic_app:other' %}">Other</a>
     </div>
 
+    <div class="container" id="content">
+      <div class="jumbotron">{% block content %} {% endblock %}</div>
+
+      <h1>hello world</h1>
+
+      {%block content2%} {%endblock%}
+    </div>
   </body>
 </html>

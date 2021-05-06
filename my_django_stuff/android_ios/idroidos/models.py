@@ -11,6 +11,7 @@ class UserProfileInfo(models.Model):
     middlename=models.TextField(max_length=50,blank=True)
     lastname=models.TextField(max_length=50,blank=True)
     contact=models.PositiveIntegerField(blank=True)
+    types = models.ForeignKey(UserType, on_delete = models.CASCADE)
 
     # def get_asolute_url(self):
     #     return reverse('homepage')
